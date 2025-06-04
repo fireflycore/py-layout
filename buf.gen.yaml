@@ -1,0 +1,18 @@
+version: v2
+managed:
+  enabled: true
+plugins:
+  - remote: buf.build/grpc/python
+    out: dep/protobuf/gen
+  - remote: buf.build/protocolbuffers/pyi
+    out: dep/protobuf/gen
+  - remote: buf.build/protocolbuffers/python
+    out: dep/protobuf/gen
+inputs:
+  - module: buf.build/firefly/demo:main
+    types:
+      - acme.config.v1
+      - acme.logger.access.v1
+      - acme.logger.server.v1
+      - acme.logger.operation.v1
+      - acme.demo.v1
