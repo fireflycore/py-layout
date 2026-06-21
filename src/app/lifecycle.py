@@ -6,8 +6,8 @@ from dataclasses import dataclass
 
 import structlog
 
-from .settings import BootstrapConfig, ConsulSettings
-from ..runtime.logging import configure_logging
+from app.settings import BootstrapConfig, ConsulSettings
+from runtime.logging import configure_logging
 
 
 @dataclass(slots=True)
@@ -29,7 +29,7 @@ async def create_runtime_resources(bootstrap: BootstrapConfig, consul: ConsulSet
     """创建 py-layout 运行期资源。"""
 
     configure_logging(bootstrap.logger.level)
-    logger = structlog.get_logger("firefly_app").bind(
+    logger = structlog.get_logger("py_layout").bind(
         service_name=bootstrap.service.name,
         service_instance_id=bootstrap.app.instance_id,
     )

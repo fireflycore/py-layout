@@ -1,4 +1,4 @@
-.PHONY: sync test lint typecheck
+.PHONY: sync test lint typecheck run
 
 sync:
 	uv sync
@@ -11,3 +11,6 @@ lint:
 
 typecheck:
 	uv run mypy
+
+run:
+	PYTHONPATH=src uv run python -m app.main

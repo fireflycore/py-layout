@@ -6,7 +6,7 @@ from fastapi import FastAPI
 from prometheus_client import CONTENT_TYPE_LATEST, generate_latest
 from starlette.responses import Response
 
-from ..app.settings import BootstrapConfig
+from app.settings import BootstrapConfig
 
 
 def create_management_app(config: BootstrapConfig) -> FastAPI:

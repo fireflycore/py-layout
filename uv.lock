@@ -445,7 +445,7 @@ dev = [
 [[package]]
 name = "firefly-py-layout"
 version = "0.0.1"
-source = { editable = "." }
+source = { virtual = "." }
 dependencies = [
     { name = "alembic" },
     { name = "asyncmy" },

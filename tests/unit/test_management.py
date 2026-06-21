@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from fastapi.testclient import TestClient
 
-from firefly_app.app.bootstrap import load_bootstrap_config
-from firefly_app.server.management import create_management_app
+from app.bootstrap import load_bootstrap_config
+from server.management import create_management_app
 
 
 def test_management_app_exposes_health_ready_info_and_metrics() -> None:

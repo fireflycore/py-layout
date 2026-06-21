@@ -5,7 +5,7 @@ from pathlib import Path
 from firefly.consul import ConsulConfig
 from firefly.micro.telemetry import TelemetryConfig
 
-from firefly_app.app.bootstrap import load_bootstrap_config, load_consul_config
+from app.bootstrap import load_bootstrap_config, load_consul_config
 
 
 def test_load_bootstrap_config() -> None:

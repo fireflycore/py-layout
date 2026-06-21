@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from firefly_app.data import DatabaseSettings, RedisSettings, build_async_database_url
+from data import DatabaseSettings, RedisSettings, build_async_database_url
 
 
 def test_database_url_uses_async_driver() -> None:
