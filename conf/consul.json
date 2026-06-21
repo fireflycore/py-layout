@@ -1,0 +1,7 @@
+{
+  "base_url": "http://127.0.0.1:8500",
+  "namespace": "config-center",
+  "timeout": 3.0,
+  "watch_buffer": 8,
+  "watch_wait_seconds": 60
+}

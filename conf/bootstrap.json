@@ -1,0 +1,45 @@
+{
+  "app": {
+    "id": "demo-app",
+    "instance_id": "demo-app-001",
+    "name": "Firefly Python Demo",
+    "env": "dev",
+    "version": "0.0.1"
+  },
+  "service": {
+    "name": "firefly-python-demo",
+    "namespace": "default",
+    "type": "svc",
+    "cluster_domain": "cluster.local",
+    "weight": 100
+  },
+  "kernel": {
+    "language": "python",
+    "version": "py-layout/0.0.1"
+  },
+  "server": {
+    "host": "0.0.0.0",
+    "grpc_port": 50051,
+    "http_port": 8080,
+    "management_port": 15020
+  },
+  "logger": {
+    "level": "INFO",
+    "console": true
+  },
+  "telemetry": {
+    "service_name": "firefly-python-demo",
+    "service_version": "0.0.1",
+    "environment": "dev",
+    "otlp_endpoint": "",
+    "traces": true,
+    "metrics": true,
+    "logs": true
+  },
+  "sidecar": {
+    "base_url": "http://127.0.0.1:15010",
+    "watch_url": "",
+    "grace_period": "10s",
+    "gateway_manifest_path": "dep/protobuf/gen/gateway.manifest.json"
+  }
+}
