@@ -15,6 +15,9 @@ dependencies = [
   "fastapi>=0.115.0",
   "firefly-consul==0.0.1",
   "firefly-micro==0.0.1",
+  "firefly-orm==0.0.1",
+  "firefly-redis==0.0.1",
+  "firefly-utils==0.0.1",
   "grpcio>=1.65.0",
   "grpcio-tools>=1.65.0",
   "httpx>=0.27.0",
@@ -52,6 +55,9 @@ package = false
 [tool.uv.sources]
 firefly-micro = { path = "../py-micro", editable = true }
 firefly-consul = { path = "../py-consul", editable = true }
+firefly-utils = { path = "../py-utils", editable = true }
+firefly-orm = { path = "../py-orm", editable = true }
+firefly-redis = { path = "../py-redis", editable = true }
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
